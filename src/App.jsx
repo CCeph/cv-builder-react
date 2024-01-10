@@ -1,11 +1,14 @@
 import { useState } from 'react'
 import './App.css'
+import ResumeDisplay from './components/ResumeDisplay'
+import SidePanel from './components/SidePanel'
 
 function App() {
   return (
-    <>
-      <h1>Great things will come</h1>
-    </>
+    <div className='mainBody'>
+      <SidePanel></SidePanel>
+      <ResumeDisplay></ResumeDisplay>
+    </div>
   )
 }
 

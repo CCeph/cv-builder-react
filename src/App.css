@@ -1,0 +1,29 @@
+:root {
+  --page-max-width: 1500px;
+}
+
+.mainBody {
+  display: flex;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 15px;
+  gap: 15px;
+}
+
+.side-panel {
+  flex: 1;
+}
+
+.resume-display {
+  flex: 2;
+}
+
+:is(.side-panel, .resume-display) {
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 10px;
+}
+
+:is(.side-panel, .resume-display) h1 {
+  margin: 0;
+}
