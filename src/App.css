@@ -17,13 +17,3 @@
 .resume-display {
   flex: 2;
 }
-
-:is(.side-panel, .resume-display) {
-  border: 1px dotted black;
-  border-radius: 7px;
-  padding: 10px;
-}
-
-:is(.side-panel, .resume-display) h1 {
-  margin: 0;
-}
