@@ -19,7 +19,7 @@
 }
 
 :is(.side-panel, .resume-display) {
-  border: 1px solid black;
+  border: 1px dotted black;
   border-radius: 7px;
   padding: 10px;
 }
