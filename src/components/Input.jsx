@@ -1,4 +1,4 @@
-export default function Input({labelTitle, inputName, inputType}) {
+export default function Input({labelTitle, inputName, inputType={"text"}}) {
     return (
         <>
         <label htmlFor={inputName}>{labelTitle}</label>
