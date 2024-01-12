@@ -3,7 +3,6 @@ import Input from "./Input";
 import "../styles/SidePanel.css"
 
 export default function SidePanel({inputStates}) {
-    console.log(inputStates.fullName);
     return (
         <div className="side-panel">
         <FormSection title="Personal Info">
