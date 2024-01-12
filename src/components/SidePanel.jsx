@@ -12,6 +12,16 @@ export default function SidePanel() {
             <Input labelTitle="Address Line 1: " inputName="address1"></Input>
             <Input labelTitle="Address Line 2: " inputName="address2"></Input>
         </FormSection>
+
+        <FormSection title="Education">
+            <Input labelTitle="Institute Name: " inputName="institute-name"></Input>
+            <Input labelTitle="City of Institute: " inputName="institute-city"></Input>
+            <Input labelTitle="Province of Institute: (Optional)" inputName="institute-province"></Input>
+            <Input labelTitle="Country of Institute: " inputName="institute-country"></Input>
+            <Input labelTitle="Degree/Program: " inputName="program"></Input>
+            <Input labelTitle="Start Date: " inputName="start-date" inputType="date"></Input>
+            <Input labelTitle="End Date: " inputName="end-date" inputType="date"></Input>
+        </FormSection>
         </div>
     )
 }
