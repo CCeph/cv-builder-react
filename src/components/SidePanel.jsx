@@ -19,8 +19,18 @@ export default function SidePanel() {
             <Input labelTitle="Province of Institute: (Optional)" inputName="institute-province"></Input>
             <Input labelTitle="Country of Institute: " inputName="institute-country"></Input>
             <Input labelTitle="Degree/Program: " inputName="program"></Input>
-            <Input labelTitle="Start Date: " inputName="start-date" inputType="date"></Input>
-            <Input labelTitle="End Date: " inputName="end-date" inputType="date"></Input>
+            <Input labelTitle="Start Date: " inputName="education-start-date" inputType="date"></Input>
+            <Input labelTitle="End Date: " inputName="education-end-date" inputType="date"></Input>
+        </FormSection>
+
+        <FormSection title="Work Experience">
+            <Input labelTitle="Employer Name: " inputName="employer-name"></Input>
+            <Input labelTitle="City of Employer: " inputName="employer-city"></Input>
+            <Input labelTitle="Province of Employer: (Optional)" inputName="employer-province"></Input>
+            <Input labelTitle="Country of Employer: " inputName="employer-country"></Input>
+            <Input labelTitle="Job Title: " inputName="job-title"></Input>
+            <Input labelTitle="Start Date: " inputName="job-start-date" inputType="date"></Input>
+            <Input labelTitle="End Date: " inputName="job-end-date" inputType="date"></Input>
         </FormSection>
         </div>
     )
