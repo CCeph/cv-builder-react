@@ -2,15 +2,26 @@ import FormSection from "./FormSection";
 import Input from "./Input";
 import "../styles/SidePanel.css"
 
-export default function SidePanel() {
+export default function SidePanel({inputStates}) {
+    console.log(inputStates.fullName);
     return (
         <div className="side-panel">
         <FormSection title="Personal Info">
-            <Input labelTitle="Full Name: " inputName="full-name"></Input>
-            <Input labelTitle="Email: " inputName="email" inputType="email"></Input>
-            <Input labelTitle="Phone Number: " inputName="phone-number"></Input>
-            <Input labelTitle="Address Line 1: " inputName="address1"></Input>
-            <Input labelTitle="Address Line 2: " inputName="address2"></Input>
+            <Input labelTitle="Full Name: " inputName="full-name"
+            value={inputStates.fullName}
+            valueHandler={inputStates.setFullName}></Input>
+            <Input labelTitle="Email: " inputName="email" inputType="email"
+            value={inputStates.email}
+            valueHandler={inputStates.setEmail}></Input>
+            <Input labelTitle="Phone Number: " inputName="phone-number"
+            value={inputStates.phoneNumber}
+            valueHandler={inputStates.setPhoneNumber}></Input>
+            <Input labelTitle="Address Line 1: " inputName="address1"
+            value={inputStates.address1}
+            valueHandler={inputStates.setAddress1}></Input>
+            <Input labelTitle="Address Line 2: " inputName="address2"
+            value={inputStates.address2}
+            valueHandler={inputStates.setAddress2}></Input>
         </FormSection>
 
         <FormSection title="Education">
