@@ -1,6 +1,26 @@
+@import "../rootVariables.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 .resume-display {
     border: 1px dotted black;
     border-radius: 7px;
     padding: 10px;
     margin: 0;
+    font-family: var(--primary-font-family);
+}
+
+.personal-info p {
+    margin: 0;
+}
+
+.personal-info .address {
+    color: var(--primary-font-color);
+}
+
+.personal-info .extra {
+    color: var(--secondary-font-color);
+}
+
+.personal-info h1 {
+    font-weight: 700;
 }

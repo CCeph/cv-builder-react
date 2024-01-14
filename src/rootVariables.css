@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --page-max-width: 1500px;
+    --primary-font-color: #999999;
+    --secondary-font-color: #e91d63;
+    --primary-font-family: 'Roboto', sans-serif;
+  }
