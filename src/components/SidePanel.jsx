@@ -8,10 +8,7 @@ import { v4 as uuidv4 } from "uuid";
 export default function SidePanel({ inputStates, schoolList, setSchoolList }) {
   function addSchoolForm() {
     const uniqueID = uuidv4();
-    setSchoolList([
-      ...schoolList,
-      <School key={uniqueID} schoolID={uniqueID}></School>,
-    ]);
+    setSchoolList([...schoolList, { id: uniqueID }]);
   }
 
   return (
@@ -51,7 +48,9 @@ export default function SidePanel({ inputStates, schoolList, setSchoolList }) {
       </FormSection>
 
       <FormSection title="Education">
-        {schoolList}
+        {schoolList.map((school) => (
+          <School key={school.id} schoolID={school.id}></School>
+        ))}
         <button className="add-button" onClick={addSchoolForm}>
           <span className="material-symbols-outlined">add</span>Education
         </button>

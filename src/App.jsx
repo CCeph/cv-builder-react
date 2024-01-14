@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./App.css";
 import ResumeDisplay from "./components/ResumeDisplay";
 import SidePanel from "./components/SidePanel";
-import School from "./components/School";
 
 function App() {
   const [fullName, setFullName] = useState("");
