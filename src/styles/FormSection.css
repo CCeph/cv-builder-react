@@ -26,6 +26,7 @@
    font-family: var(--primary-font-family);
    background-color: transparent;
    margin: 0 auto;
+   margin-top: 15px;
 }
 
 .form-section .add-button:active {
