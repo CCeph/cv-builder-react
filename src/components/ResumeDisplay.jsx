@@ -3,7 +3,14 @@ import "../styles/ResumeDisplay.css"
 export default function ResumeDisplay({inputStates}) {
     return (
         <div className="resume-display">
-        <h1>I am the Resume</h1>
+        <section className="personal-info">
+            <p className="address">{inputStates.address1}</p>
+            <p className="address">{inputStates.address2}</p>
+            <p>{inputStates.phoneNumber}</p>
+            <p>{inputStates.email}</p>
+            <h1>{inputStates.fullName}</h1>
+            <hr />
+        </section>
         </div>
     )
 }
