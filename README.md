@@ -21,3 +21,4 @@ N/A
 3. Ensure CV updates live on user input.
 4. Add a download button to download as PDF.
 5. Instead of static fields under each formSection, allow the user to add as many sub-sections as they like.
+Figure out the "Name will go here" title. Probably create a popup before adding the subsection.
