@@ -23,4 +23,11 @@
 
 .personal-info h1 {
     font-weight: 700;
+    margin-bottom: 0;
+    color: var(--darker-grey);
+}
+
+.personal-info hr {
+    margin: 0;
+    border: 2px solid var(--darker-grey);
 }
