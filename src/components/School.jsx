@@ -24,6 +24,7 @@ export default function School({schoolID}) {
                 <Input labelTitle="Degree/Program: " inputName={`${schoolID}+program`}></Input>
                 <Input labelTitle="Start Date: " inputName={`${schoolID}+education-start-date`} inputType="date"></Input>
                 <Input labelTitle="End Date: " inputName={`${schoolID}+education-end-date`} inputType="date"></Input>
+                <button className="deleteSection">Delete</button>
             </div>}
     </div>
     )
