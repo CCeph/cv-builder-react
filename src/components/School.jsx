@@ -2,7 +2,17 @@ import Input from "./Input";
 import "../styles/School.css";
 import { useState } from "react";
 
-export default function School({ schoolID, deleteSchoolFromList }) {
+export default function School({
+  schoolID,
+  deleteSchoolFromList,
+  schoolName,
+  city,
+  province,
+  country,
+  degree,
+  startDate,
+  endDate,
+}) {
   const [showDetails, setShowDetails] = useState(false);
 
   function toggleDetails() {
@@ -21,32 +31,39 @@ export default function School({ schoolID, deleteSchoolFromList }) {
           <Input
             labelTitle="Institute Name: "
             inputName={`${schoolID}+institute-name`}
+            value={schoolName}
           ></Input>
           <Input
             labelTitle="City of Institute: "
             inputName={`${schoolID}+institute-city`}
+            value={city}
           ></Input>
           <Input
             labelTitle="Province of Institute: (Optional)"
             inputName={`${schoolID}+institute-province`}
+            value={province}
           ></Input>
           <Input
             labelTitle="Country of Institute: "
             inputName={`${schoolID}+institute-country`}
+            value={country}
           ></Input>
           <Input
             labelTitle="Degree/Program: "
             inputName={`${schoolID}+program`}
+            value={degree}
           ></Input>
           <Input
             labelTitle="Start Date: "
             inputName={`${schoolID}+education-start-date`}
             inputType="date"
+            value={startDate}
           ></Input>
           <Input
             labelTitle="End Date: "
             inputName={`${schoolID}+education-end-date`}
             inputType="date"
+            value={endDate}
           ></Input>
           <button
             className="deleteSection"

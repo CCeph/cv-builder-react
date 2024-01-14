@@ -3,7 +3,6 @@ import Input from "./Input";
 import School from "./School";
 import "../styles/SidePanel.css";
 import { createElement } from "react";
-import { v4 as uuidv4 } from "uuid";
 
 export default function SidePanel({
   inputStates,
@@ -53,6 +52,13 @@ export default function SidePanel({
             key={school.id}
             schoolID={school.id}
             deleteSchoolFromList={deleteSchoolFromList}
+            schoolName={school.schoolName}
+            city={school.city}
+            province={school.province}
+            country={school.country}
+            degree={school.degree}
+            startDate={school.startDate}
+            endDate={school.endDate}
           ></School>
         ))}
         <button className="add-button" onClick={addSchoolForm}>
