@@ -13,3 +13,21 @@
     width: 100%;
     padding: 7px;
 }
+
+.form-section .add-button {
+   border-radius: 50px; 
+   border: 2px solid black;
+   font-size: var(--regular-font-size);
+   display: flex;
+   align-items: center;
+   gap: 5px;
+   padding: 8px;
+   padding-right: 10px;
+   font-family: var(--primary-font-family);
+   background-color: transparent;
+   margin: 0 auto;
+}
+
+.form-section .add-button:active {
+    box-shadow: var(--clickedButtonShadow);
+}

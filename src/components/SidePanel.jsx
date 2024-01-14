@@ -4,7 +4,7 @@ import School from "./School";
 import "../styles/SidePanel.css"
 import { createElement } from "react";
 
-export default function SidePanel({inputStates}) {
+export default function SidePanel({inputStates, schoolList}) {
     return (
         <div className="side-panel">
         <FormSection title="Personal Info">
@@ -26,7 +26,8 @@ export default function SidePanel({inputStates}) {
         </FormSection>
 
         <FormSection title="Education">
-        <School></School>
+            {schoolList}
+            <button className="add-button"><span className="material-symbols-outlined">add</span>Education</button>
         </FormSection>
 
         <FormSection title="Work Experience">
