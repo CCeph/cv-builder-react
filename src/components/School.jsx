@@ -32,38 +32,45 @@ export default function School({
             labelTitle="Institute Name: "
             inputName={`${schoolID}+institute-name`}
             value={schoolName}
+            scriptName="schoolName"
           ></Input>
           <Input
             labelTitle="City of Institute: "
             inputName={`${schoolID}+institute-city`}
             value={city}
+            scriptName="city"
           ></Input>
           <Input
             labelTitle="Province of Institute: (Optional)"
             inputName={`${schoolID}+institute-province`}
             value={province}
+            scriptName="province"
           ></Input>
           <Input
             labelTitle="Country of Institute: "
             inputName={`${schoolID}+institute-country`}
             value={country}
+            scriptName="country"
           ></Input>
           <Input
             labelTitle="Degree/Program: "
             inputName={`${schoolID}+program`}
             value={degree}
+            scriptName="degree"
           ></Input>
           <Input
             labelTitle="Start Date: "
             inputName={`${schoolID}+education-start-date`}
             inputType="date"
             value={startDate}
+            scriptName="startDate"
           ></Input>
           <Input
             labelTitle="End Date: "
             inputName={`${schoolID}+education-end-date`}
             inputType="date"
             value={endDate}
+            scriptName="endDate"
           ></Input>
           <button
             className="deleteSection"

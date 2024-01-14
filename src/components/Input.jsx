@@ -4,6 +4,7 @@ export default function Input({
   inputType = "text",
   value,
   valueHandler,
+  scriptName,
 }) {
   return (
     <>
@@ -14,6 +15,7 @@ export default function Input({
         id={inputName}
         value={value}
         onChange={(e) => valueHandler(e.target.value)}
+        data-script-name={scriptName}
       />
     </>
   );
