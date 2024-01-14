@@ -32,3 +32,14 @@
 .form-section .add-button:active {
     box-shadow: var(--clickedButtonShadow);
 }
+
+.form-section .detailsToggle {
+    border: 0px;
+    font-size: var(--regular-font-size);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--primary-font-family);
+    background-color: transparent;
+    margin: 0 auto;
+}
