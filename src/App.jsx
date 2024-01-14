@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className='mainBody'>
-      <SidePanel inputStates={inputStates} schoolList={schoolList}></SidePanel>
+      <SidePanel inputStates={inputStates} schoolList={schoolList} setSchoolList={setSchoolList}></SidePanel>
       <ResumeDisplay inputStates={inputStates}></ResumeDisplay>
     </div>
   )
