@@ -12,7 +12,7 @@ export default function School({schoolID}) {
     return (
         <div className="school">
         <button className="detailsToggle" onClick={toggleDetails}>
-            <h2>Name will go here</h2> <img src="src/assets/keyboard_arrow_down_FILL0_wght400_GRAD0_opsz24.svg"/>
+            <h2>School</h2> <img src="src/assets/keyboard_arrow_down_FILL0_wght400_GRAD0_opsz24.svg"/>
         </button>
         {showDetails && 
                 <div className="details">
