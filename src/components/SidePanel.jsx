@@ -7,7 +7,8 @@ import {v4 as uuidv4 } from 'uuid';
 
 export default function SidePanel({inputStates, schoolList, setSchoolList}) {
     function addSchoolForm() {
-        setSchoolList([...schoolList, <School key={uuidv4()} schoolID={uuidv4()}></School>])
+        const uniqueID = uuidv4();
+        setSchoolList([...schoolList, <School key={uniqueID} schoolID={uniqueID}></School>])
     }
 
     return (
