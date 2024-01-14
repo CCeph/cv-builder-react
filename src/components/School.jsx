@@ -1,4 +1,5 @@
 import Input from "./Input";
+import "../styles/School.css"
 
 export default function School({schoolID}) {
     return (
