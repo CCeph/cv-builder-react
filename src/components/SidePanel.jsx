@@ -8,14 +8,9 @@ import { v4 as uuidv4 } from "uuid";
 export default function SidePanel({
   inputStates,
   schoolList,
-  setSchoolList,
+  addSchoolForm,
   deleteSchoolFromList,
 }) {
-  function addSchoolForm() {
-    const uniqueID = uuidv4();
-    setSchoolList([...schoolList, { id: uniqueID }]);
-  }
-
   return (
     <div className="side-panel">
       <FormSection title="Personal Info">
