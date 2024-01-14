@@ -12,6 +12,13 @@ function App() {
 
   const [schoolList, setSchoolList] = useState([]);
 
+  function deleteSchoolFromList(selectedSchoolID) {
+    const newSchoolList = schoolList.filter(
+      (school) => school.id !== selectedSchoolID
+    );
+    setSchoolList(newSchoolList);
+  }
+
   const inputStates = {
     fullName,
     setFullName,
@@ -31,6 +38,7 @@ function App() {
         inputStates={inputStates}
         schoolList={schoolList}
         setSchoolList={setSchoolList}
+        deleteSchoolFromList={deleteSchoolFromList}
       ></SidePanel>
       <ResumeDisplay inputStates={inputStates}></ResumeDisplay>
     </div>

@@ -5,7 +5,12 @@ import "../styles/SidePanel.css";
 import { createElement } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-export default function SidePanel({ inputStates, schoolList, setSchoolList }) {
+export default function SidePanel({
+  inputStates,
+  schoolList,
+  setSchoolList,
+  deleteSchoolFromList,
+}) {
   function addSchoolForm() {
     const uniqueID = uuidv4();
     setSchoolList([...schoolList, { id: uniqueID }]);
@@ -49,7 +54,11 @@ export default function SidePanel({ inputStates, schoolList, setSchoolList }) {
 
       <FormSection title="Education">
         {schoolList.map((school) => (
-          <School key={school.id} schoolID={school.id}></School>
+          <School
+            key={school.id}
+            schoolID={school.id}
+            deleteSchoolFromList={deleteSchoolFromList}
+          ></School>
         ))}
         <button className="add-button" onClick={addSchoolForm}>
           <span className="material-symbols-outlined">add</span>Education

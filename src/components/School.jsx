@@ -2,7 +2,7 @@ import Input from "./Input";
 import "../styles/School.css";
 import { useState } from "react";
 
-export default function School({ schoolID }) {
+export default function School({ schoolID, deleteSchoolFromList }) {
   const [showDetails, setShowDetails] = useState(false);
 
   function toggleDetails() {
@@ -48,7 +48,12 @@ export default function School({ schoolID }) {
             inputName={`${schoolID}+education-end-date`}
             inputType="date"
           ></Input>
-          <button className="deleteSection">Delete</button>
+          <button
+            className="deleteSection"
+            onClick={() => deleteSchoolFromList(schoolID)}
+          >
+            Delete
+          </button>
         </div>
       )}
     </div>
