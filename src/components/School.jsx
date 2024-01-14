@@ -20,7 +20,10 @@ export default function School({
   }
 
   function updateSchoolInputs(e) {
-    console.log(e.target.getAttribute("data-script-name"));
+    const scriptName = e.target.getAttribute("data-script-name");
+    const value = e.target.value;
+    const id = e.target.id.split("+")[0];
+    console.log(scriptName, value, id);
   }
 
   return (
@@ -44,24 +47,28 @@ export default function School({
             inputName={`${schoolID}+institute-city`}
             value={city}
             scriptName="city"
+            valueHandler={updateSchoolInputs}
           ></FlexInput>
           <FlexInput
             labelTitle="Province of Institute: (Optional)"
             inputName={`${schoolID}+institute-province`}
             value={province}
             scriptName="province"
+            valueHandler={updateSchoolInputs}
           ></FlexInput>
           <FlexInput
             labelTitle="Country of Institute: "
             inputName={`${schoolID}+institute-country`}
             value={country}
             scriptName="country"
+            valueHandler={updateSchoolInputs}
           ></FlexInput>
           <FlexInput
             labelTitle="Degree/Program: "
             inputName={`${schoolID}+program`}
             value={degree}
             scriptName="degree"
+            valueHandler={updateSchoolInputs}
           ></FlexInput>
           <FlexInput
             labelTitle="Start Date: "
@@ -69,6 +76,7 @@ export default function School({
             inputType="date"
             value={startDate}
             scriptName="startDate"
+            valueHandler={updateSchoolInputs}
           ></FlexInput>
           <FlexInput
             labelTitle="End Date: "
@@ -76,6 +84,7 @@ export default function School({
             inputType="date"
             value={endDate}
             scriptName="endDate"
+            valueHandler={updateSchoolInputs}
           ></FlexInput>
           <button
             className="deleteSection"
