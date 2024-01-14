@@ -3,10 +3,11 @@ import Input from "./Input";
 import School from "./School";
 import "../styles/SidePanel.css"
 import { createElement } from "react";
+import {v4 as uuidv4 } from 'uuid';
 
 export default function SidePanel({inputStates, schoolList, setSchoolList}) {
     function addSchoolForm() {
-        setSchoolList([...schoolList, <School></School>])
+        setSchoolList([...schoolList, <School key={uuidv4()}></School>])
     }
 
     return (
