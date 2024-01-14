@@ -4,11 +4,11 @@
     padding: 15px;
 }
 
-.form-section > h1 {
+.form-section h1 {
     margin: 0;
 }
 
-.form-section > input {
+.form-section input {
     display: block;
     width: 100%;
     padding: 7px;

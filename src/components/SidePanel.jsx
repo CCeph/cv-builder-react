@@ -1,6 +1,8 @@
 import FormSection from "./FormSection";
 import Input from "./Input";
+import School from "./School";
 import "../styles/SidePanel.css"
+import { createElement } from "react";
 
 export default function SidePanel({inputStates}) {
     return (
@@ -24,13 +26,7 @@ export default function SidePanel({inputStates}) {
         </FormSection>
 
         <FormSection title="Education">
-            <Input labelTitle="Institute Name: " inputName="institute-name"></Input>
-            <Input labelTitle="City of Institute: " inputName="institute-city"></Input>
-            <Input labelTitle="Province of Institute: (Optional)" inputName="institute-province"></Input>
-            <Input labelTitle="Country of Institute: " inputName="institute-country"></Input>
-            <Input labelTitle="Degree/Program: " inputName="program"></Input>
-            <Input labelTitle="Start Date: " inputName="education-start-date" inputType="date"></Input>
-            <Input labelTitle="End Date: " inputName="education-end-date" inputType="date"></Input>
+        <School></School>
         </FormSection>
 
         <FormSection title="Work Experience">
