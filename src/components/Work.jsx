@@ -2,7 +2,17 @@ import FlexInput from "./FlexInput";
 import "../styles/Work.css";
 import { useState } from "react";
 
-export default function Work() {
+export default function Work({
+  workID,
+  deleteWorkFromList,
+  employerName,
+  city,
+  province,
+  country,
+  jobTitle,
+  startDate,
+  endDate,
+}) {
   const [showDetails, setShowDetails] = useState(false);
 
   function toggleDetails() {
@@ -48,7 +58,7 @@ export default function Work() {
           ></FlexInput>
           <button
             className="deleteSection"
-            onClick={() => deleteSchoolFromList(schoolID)}
+            onClick={() => deleteWorkFromList(workID)}
           >
             Delete
           </button>

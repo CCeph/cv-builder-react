@@ -70,6 +70,11 @@ function App() {
     ]);
   }
 
+  function deleteWorkFromlist(selectedWorkID) {
+    const newWorkList = workList.filter((work) => work.id !== selectedWorkID);
+    setWorkList(newWorkList);
+  }
+
   const inputStates = {
     fullName,
     setFullName,
@@ -93,6 +98,7 @@ function App() {
         updateSchool={updateSchool}
         workList={workList}
         addWorkForm={addWorkForm}
+        deleteWorkFromList={deleteWorkFromlist}
       ></SidePanel>
       <ResumeDisplay
         inputStates={inputStates}

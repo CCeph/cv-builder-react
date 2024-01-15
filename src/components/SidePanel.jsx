@@ -13,6 +13,7 @@ export default function SidePanel({
   updateSchool,
   workList,
   addWorkForm,
+  deleteWorkFromList,
 }) {
   return (
     <div className="side-panel">
@@ -76,6 +77,7 @@ export default function SidePanel({
           <Work
             key={work.id}
             workID={work.id}
+            deleteWorkFromList={deleteWorkFromList}
             employerName={work.employerName}
             city={work.city}
             province={work.province}
