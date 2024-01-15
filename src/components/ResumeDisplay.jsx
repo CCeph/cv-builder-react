@@ -42,7 +42,9 @@ export default function ResumeDisplay({ inputStates, schoolList, workList }) {
               {work.city && `${work.city},`}{" "}
               {work.province && `${work.province},`}{" "}
               {work.country && `${work.country}`}{" "}
-              {work.degree && <span className="degree">— {work.degree}</span>}
+              {work.jobTitle && (
+                <span className="jobTitle">— {work.jobTitle}</span>
+              )}
             </h3>
             <p>
               {work.startDate && `${work.startDate} - `}{" "}
