@@ -51,6 +51,25 @@ function App() {
     setSchoolList(newSchoolList);
   }
 
+  const [workList, setWorkList] = useState([]);
+
+  function addWorkForm() {
+    const uniqueID = uuidv4();
+    setWorkList([
+      ...workList,
+      {
+        id: uniqueID,
+        employerName: "",
+        city: "",
+        province: "",
+        country: "",
+        jobTitle: "",
+        startDate: "",
+        endDate: "",
+      },
+    ]);
+  }
+
   const inputStates = {
     fullName,
     setFullName,
@@ -72,6 +91,8 @@ function App() {
         addSchoolForm={addSchoolForm}
         deleteSchoolFromList={deleteSchoolFromList}
         updateSchool={updateSchool}
+        workList={workList}
+        addWorkForm={addWorkForm}
       ></SidePanel>
       <ResumeDisplay
         inputStates={inputStates}

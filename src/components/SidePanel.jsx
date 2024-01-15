@@ -11,6 +11,8 @@ export default function SidePanel({
   addSchoolForm,
   deleteSchoolFromList,
   updateSchool,
+  workList,
+  addWorkForm,
 }) {
   return (
     <div className="side-panel">
@@ -70,7 +72,22 @@ export default function SidePanel({
       </FormSection>
 
       <FormSection title="Work Experience">
-        <Work></Work>
+        {workList.map((work) => (
+          <Work
+            key={work.id}
+            workID={work.id}
+            employerName={work.employerName}
+            city={work.city}
+            province={work.province}
+            country={work.country}
+            jobTitle={work.jobTitle}
+            startDate={work.startDate}
+            endDate={work.endDate}
+          ></Work>
+        ))}
+        <button className="add-button" onClick={addWorkForm}>
+          <span className="material-symbols-outlined">add</span>Work Experience
+        </button>
       </FormSection>
     </div>
   );
