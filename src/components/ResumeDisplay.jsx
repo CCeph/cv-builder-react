@@ -11,10 +11,10 @@ export default function ResumeDisplay({ inputStates, schoolList }) {
         <h1>{inputStates.fullName}</h1>
         <hr />
       </section>
-      <section className="education">
+      <section className="education-display">
         <h2>EDUCATION</h2>
         {schoolList.map((school) => (
-          <section key={school.id} className="school">
+          <section key={school.id} className="school-display">
             <h3>
               {school.schoolName && `${school.schoolName},`}{" "}
               {school.city && `${school.city},`}{" "}

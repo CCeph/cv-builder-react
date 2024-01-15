@@ -1,33 +1,51 @@
 @import "../rootVariables.css";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 .resume-display {
-    border: 1px dotted black;
-    border-radius: 7px;
-    padding: 10px;
-    margin: 0;
-    font-family: var(--primary-font-family);
+  border: 1px dotted black;
+  border-radius: 7px;
+  padding: 10px;
+  margin: 0;
+  font-family: var(--primary-font-family);
 }
 
 .personal-info p {
-    margin: 0;
+  margin: 0;
 }
 
 .personal-info .address {
-    color: var(--primary-font-color);
+  color: var(--primary-font-color);
 }
 
 .personal-info .extra {
-    color: var(--secondary-font-color);
+  color: var(--secondary-font-color);
 }
 
 .personal-info h1 {
-    font-weight: 700;
-    margin-bottom: 0;
-    color: var(--darker-grey);
+  font-family: var(--section-header-font);
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  color: var(--darker-grey);
 }
 
 .personal-info hr {
-    margin: 0;
-    border: 2px solid var(--darker-grey);
+  margin: 0;
+  border: 2px solid var(--darker-grey);
+}
+
+.education-display > h2 {
+  font-family: var(--section-header-font);
+  font-size: 1.5rem;
+}
+
+.school-display h3 {
+  color: #e91d63;
+}
+
+.school-display h3 > span {
+  color: #2e4440;
+  font-weight: 100;
+}
+
+.school-display p {
+  color: #666666;
 }
