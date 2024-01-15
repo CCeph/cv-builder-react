@@ -6,6 +6,7 @@
   padding: 20px;
   margin: 0;
   font-family: var(--primary-font-family);
+  height: min-content;
 }
 
 .personal-info p {
