@@ -14,8 +14,8 @@ function App() {
   const [schoolList, setSchoolList] = useState([]);
 
   function updateSchool(schoolID, changedInputName, newValue) {
-    // This code obtains the school object, updates the input that was changed,
-    // then creates a new schoolList array that is used as the new state value.
+    /* This function updates the state of schoolList
+    when any input in the education forms are changed. */
     const isMatchingSchoolID = (school) => {
       return school.id === schoolID;
     };
