@@ -32,20 +32,24 @@
   border: 2px solid var(--darker-grey);
 }
 
-.education-display > h2 {
+.education-display > h2,
+.work-display > h2 {
   font-family: var(--section-header-font);
   font-size: 1.5rem;
 }
 
-.school-display h3 {
+.school-display h3,
+.work-display h3 {
   color: #e91d63;
 }
 
-.school-display h3 > span {
+.school-display h3 > span,
+.work-display h3 > span {
   color: #2e4440;
   font-weight: 100;
 }
 
-.school-display p {
+.school-display p,
+.work-display p {
   color: #666666;
 }
