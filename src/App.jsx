@@ -114,6 +114,7 @@ function App() {
       <ResumeDisplay
         inputStates={inputStates}
         schoolList={schoolList}
+        workList={workList}
       ></ResumeDisplay>
     </div>
   );
