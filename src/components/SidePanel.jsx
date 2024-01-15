@@ -14,6 +14,7 @@ export default function SidePanel({
   workList,
   addWorkForm,
   deleteWorkFromList,
+  updateWork,
 }) {
   return (
     <div className="side-panel">
@@ -85,6 +86,7 @@ export default function SidePanel({
             jobTitle={work.jobTitle}
             startDate={work.startDate}
             endDate={work.endDate}
+            updateWork={updateWork}
           ></Work>
         ))}
         <button className="add-button" onClick={addWorkForm}>

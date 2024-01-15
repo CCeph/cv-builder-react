@@ -12,11 +12,19 @@ export default function Work({
   jobTitle,
   startDate,
   endDate,
+  updateWork,
 }) {
   const [showDetails, setShowDetails] = useState(false);
 
   function toggleDetails() {
     setShowDetails(!showDetails);
+  }
+
+  function updateWorkInputs(e) {
+    const id = e.target.id.split("+")[0];
+    const changedInputName = e.target.getAttribute("data-script-name");
+    const value = e.target.value;
+    updateWork(id, changedInputName, value);
   }
 
   return (
@@ -31,49 +39,54 @@ export default function Work({
           <hr />
           <FlexInput
             labelTitle="Employer Name: "
-            inputName="employer-name"
+            inputName={`${workID}+employer-name`}
             value={employerName}
             scriptName="employerName"
-            /* 
-            valueHandler={updateSchoolInputs} */
+            valueHandler={updateWorkInputs}
           ></FlexInput>
           <FlexInput
             labelTitle="City of Employer: "
-            inputName="employer-city"
+            inputName={`${workID}+employer-city`}
             value={city}
             scriptName="city"
+            valueHandler={updateWorkInputs}
           ></FlexInput>
           <FlexInput
             labelTitle="Province of Employer: (Optional)"
-            inputName="employer-province"
+            inputName={`${workID}+employer-province`}
             value={province}
             scriptName="province"
+            valueHandler={updateWorkInputs}
           ></FlexInput>
           <FlexInput
             labelTitle="Country of Employer: "
-            inputName="employer-country"
+            inputName={`${workID}+employer-country`}
             value={country}
             scriptName="country"
+            valueHandler={updateWorkInputs}
           ></FlexInput>
           <FlexInput
             labelTitle="Job Title: "
-            inputName="job-title"
+            inputName={`${workID}+job-title`}
             value={jobTitle}
             scriptName="jobTitle"
+            valueHandler={updateWorkInputs}
           ></FlexInput>
           <FlexInput
             labelTitle="Start Date: "
-            inputName="job-start-date"
+            inputName={`${workID}+job-start-date`}
             inputType="date"
             value={startDate}
             scriptName="startDate"
+            valueHandler={updateWorkInputs}
           ></FlexInput>
           <FlexInput
             labelTitle="End Date: "
-            inputName="job-end-date"
+            inputName={`${workID}+job-end-date`}
             inputType="date"
             value={endDate}
             scriptName="endDate"
+            valueHandler={updateWorkInputs}
           ></FlexInput>
           <button
             className="deleteSection"

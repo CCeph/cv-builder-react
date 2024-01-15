@@ -75,6 +75,16 @@ function App() {
     setWorkList(newWorkList);
   }
 
+  function updateWork(workID, changedInputName, newValue) {
+    const isMatchingWorkID = (work) => work.id === workID;
+    const workIndex = workList.findIndex(isMatchingWorkID);
+    const workCopy = { ...workList[workIndex] };
+    workCopy[changedInputName] = newValue;
+    const shallowWorkListCopy = [...workList];
+    shallowWorkListCopy[workIndex] = workCopy;
+    setWorkList(shallowWorkListCopy);
+  }
+
   const inputStates = {
     fullName,
     setFullName,
@@ -99,6 +109,7 @@ function App() {
         workList={workList}
         addWorkForm={addWorkForm}
         deleteWorkFromList={deleteWorkFromlist}
+        updateWork={updateWork}
       ></SidePanel>
       <ResumeDisplay
         inputStates={inputStates}
