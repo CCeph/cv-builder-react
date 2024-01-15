@@ -12,6 +12,7 @@ export default function School({
   degree,
   startDate,
   endDate,
+  updateSchool,
 }) {
   const [showDetails, setShowDetails] = useState(false);
 
@@ -20,10 +21,10 @@ export default function School({
   }
 
   function updateSchoolInputs(e) {
-    const scriptName = e.target.getAttribute("data-script-name");
-    const value = e.target.value;
     const id = e.target.id.split("+")[0];
-    console.log(scriptName, value, id);
+    const changedInputName = e.target.getAttribute("data-script-name");
+    const value = e.target.value;
+    updateSchool(id, changedInputName, value);
   }
 
   return (

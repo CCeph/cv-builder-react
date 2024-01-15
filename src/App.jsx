@@ -13,6 +13,20 @@ function App() {
 
   const [schoolList, setSchoolList] = useState([]);
 
+  function updateSchool(schoolID, changedInputName, newValue) {
+    // This code obtains the school object, updates the input that was changed,
+    // then creates a new schoolList array that is used as the new state value.
+    const isMatchingSchoolID = (school) => {
+      return school.id === schoolID;
+    };
+    const schoolIndex = schoolList.findIndex(isMatchingSchoolID);
+    const schoolCopy = { ...schoolList[schoolIndex] };
+    schoolCopy[changedInputName] = newValue;
+    const shallowSchoolListCopy = [...schoolList];
+    shallowSchoolListCopy[schoolIndex] = schoolCopy;
+    setSchoolList(shallowSchoolListCopy);
+  }
+
   function addSchoolForm() {
     const uniqueID = uuidv4();
     setSchoolList([
@@ -57,6 +71,7 @@ function App() {
         schoolList={schoolList}
         addSchoolForm={addSchoolForm}
         deleteSchoolFromList={deleteSchoolFromList}
+        updateSchool={updateSchool}
       ></SidePanel>
       <ResumeDisplay inputStates={inputStates}></ResumeDisplay>
     </div>

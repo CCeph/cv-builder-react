@@ -9,6 +9,7 @@ export default function SidePanel({
   schoolList,
   addSchoolForm,
   deleteSchoolFromList,
+  updateSchool,
 }) {
   return (
     <div className="side-panel">
@@ -59,6 +60,7 @@ export default function SidePanel({
             degree={school.degree}
             startDate={school.startDate}
             endDate={school.endDate}
+            updateSchool={updateSchool}
           ></School>
         ))}
         <button className="add-button" onClick={addSchoolForm}>
