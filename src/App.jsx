@@ -73,7 +73,10 @@ function App() {
         deleteSchoolFromList={deleteSchoolFromList}
         updateSchool={updateSchool}
       ></SidePanel>
-      <ResumeDisplay inputStates={inputStates}></ResumeDisplay>
+      <ResumeDisplay
+        inputStates={inputStates}
+        schoolList={schoolList}
+      ></ResumeDisplay>
     </div>
   );
 }

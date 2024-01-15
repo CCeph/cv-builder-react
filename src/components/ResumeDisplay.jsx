@@ -1,6 +1,6 @@
 import "../styles/ResumeDisplay.css";
 
-export default function ResumeDisplay({ inputStates }) {
+export default function ResumeDisplay({ inputStates, schoolList }) {
   return (
     <div className="resume-display">
       <section className="personal-info">
