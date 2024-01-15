@@ -11,6 +11,26 @@ export default function ResumeDisplay({ inputStates, schoolList }) {
         <h1>{inputStates.fullName}</h1>
         <hr />
       </section>
+      <section className="education">
+        <h2>EDUCATION</h2>
+        {schoolList.map((school) => (
+          <section key={school.id} className="school">
+            <h3>
+              {school.schoolName && `${school.schoolName},`}{" "}
+              {school.city && `${school.city},`}{" "}
+              {school.province && `${school.province},`}{" "}
+              {school.country && `${school.country}`}{" "}
+              {school.degree && (
+                <span className="degree">— {school.degree}</span>
+              )}
+            </h3>
+            <p>
+              {school.startDate && `${school.startDate} - `}{" "}
+              {school.endDate ? school.endDate : "Present"}
+            </p>
+          </section>
+        ))}
+      </section>
     </div>
   );
 }
