@@ -18,6 +18,7 @@ export default function Work() {
 
       {showDetails && (
         <div className="details">
+          <hr />
           <FlexInput
             labelTitle="Employer Name: "
             inputName="employer-name"
