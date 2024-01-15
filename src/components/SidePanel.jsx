@@ -1,6 +1,7 @@
 import FormSection from "./FormSection";
 import Input from "./Input";
 import School from "./School";
+import Work from "./Work";
 import "../styles/SidePanel.css";
 import { createElement } from "react";
 
@@ -69,30 +70,7 @@ export default function SidePanel({
       </FormSection>
 
       <FormSection title="Work Experience">
-        <Input labelTitle="Employer Name: " inputName="employer-name"></Input>
-        <Input
-          labelTitle="City of Employer: "
-          inputName="employer-city"
-        ></Input>
-        <Input
-          labelTitle="Province of Employer: (Optional)"
-          inputName="employer-province"
-        ></Input>
-        <Input
-          labelTitle="Country of Employer: "
-          inputName="employer-country"
-        ></Input>
-        <Input labelTitle="Job Title: " inputName="job-title"></Input>
-        <Input
-          labelTitle="Start Date: "
-          inputName="job-start-date"
-          inputType="date"
-        ></Input>
-        <Input
-          labelTitle="End Date: "
-          inputName="job-end-date"
-          inputType="date"
-        ></Input>
+        <Work></Work>
       </FormSection>
     </div>
   );
